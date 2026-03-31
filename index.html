@@ -48,22 +48,22 @@
     }
 
     .columns {
-      display: flex;                    /* Changed from grid to flex */
+      display: flex;
       flex-wrap: wrap;
       gap: 70px;
       margin-top: 50px;
       margin-bottom: 60px;
-      align-items: flex-start;          /* Important: prevents stretching */
+      align-items: flex-start;        /* Prevents equal height stretching */
     }
 
     .column {
-      flex: 1 1 620px;                  /* Wider cards */
+      flex: 1 1 620px;                  /* Controls width */
       background: white;
       border-radius: 20px;
       box-shadow: 0 12px 40px rgba(0,0,0,0.09);
       padding: 60px 60px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      align-self: stretch;              /* Allows natural height */
+      /* Removed align-self: stretch */
     }
 
     .column:hover {
@@ -123,6 +123,7 @@
     @media (min-width: 980px) {
       header { padding: 120px 40px 80px; }
       header h1 { font-size: 4.2rem; }
+      header p { font-size: 1.6rem; }
       .columns { gap: 80px; margin-top: 60px; }
     }
 
